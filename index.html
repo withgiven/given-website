@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="/favicon.png">
+	<title>Given</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0 1.5rem;
+			height: 100vh;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			font-family: system-ui, -apple-system, sans-serif;
+			color: #111827;
+		}
+
+		h1 {
+			max-width: 42rem;
+			text-align: center;
+			font-size: 1.25rem;
+			font-weight: 300;
+			line-height: 1.75;
+			letter-spacing: 0.025em;
+			opacity: 0;
+		}
+
+		@keyframes fadeInUp {
+			from {
+				opacity: 0;
+				transform: translateY(20px);
+			}
+
+			to {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+
+		.fadeInUp {
+			animation: fadeInUp 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+		}
+
+		.delay-100 {
+			animation-delay: 0.1s;
+		}
+	</style>
+</head>
+
+<body>
+	<h1 class="fadeInUp delay-100">
+		At Given, we craft wonderful products.
+	</h1>
+
+	<script>
+		/*
+		// Animation configuration
+		const words = ['wonderful'];
+		const TYPING_SPEED = 100;
+		const PAUSE_AFTER_TYPING = 1000;
+		const PAUSE_BEFORE_ERASE = 2000;
+		const ERASE_SPEED = 50;
+		const PAUSE_BEFORE_NEXT = 500;
+		const INITIAL_DELAY = 2500;
+
+		// Animation state
+		let currentIndex = 0;
+		let currentWord = words[0];
+		let isTyping = true;
+		let displayText = 'simple';
+		const wordElement = document.getElementById('word');
+
+		// Types the current word character by character
+		function typeWord() {
+			if (!isTyping) return;
+
+			if (displayText.length < currentWord.length) {
+				// Add next character
+				displayText = currentWord.slice(0, displayText.length + 1);
+				wordElement.textContent = displayText;
+				setTimeout(typeWord, TYPING_SPEED);
+			} else {
+				// Word is complete, pause then start erasing
+				setTimeout(() => {
+					isTyping = false;
+					setTimeout(eraseWord, PAUSE_BEFORE_ERASE);
+				}, PAUSE_AFTER_TYPING);
+			}
+		}
+
+		// Erases the current word character by character
+		function eraseWord() {
+			if (isTyping) return;
+
+			if (displayText.length > 0) {
+				// Remove last character
+				displayText = displayText.slice(0, -1);
+				wordElement.textContent = displayText;
+				setTimeout(eraseWord, ERASE_SPEED);
+			} else {
+				// Word is erased, move to next word
+				currentIndex = (currentIndex + 1) % words.length;
+				currentWord = words[currentIndex];
+				isTyping = true;
+				setTimeout(typeWord, PAUSE_BEFORE_NEXT);
+			}
+		}
+
+		// Start the animation after the page loads
+		window.addEventListener('load', () => {
+			setTimeout(() => {
+				displayText = '';
+				wordElement.textContent = displayText;
+				typeWord();
+			}, INITIAL_DELAY);
+		});
+		*/
+	</script>
+</body>
+
+</html>
